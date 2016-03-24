@@ -31,9 +31,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.roughike.bottombar.scrollsweetness.BottomNavigationBehavior;
-
 import java.util.HashMap;
+
+import frame.havery.com.ui.R;
+import frame.havery.com.ui.widget.bottombar.scrollsweetness.BottomNavigationBehavior;
 
 /*
  * BottomBar library for Android

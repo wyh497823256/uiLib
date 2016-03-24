@@ -28,6 +28,8 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
+import frame.havery.com.ui.R;
+
 /**
  * Created by Iiro Krankka (http://github.com/roughike)
  */

@@ -20,6 +20,8 @@ import android.view.ViewAnimationUtils;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import frame.havery.com.ui.R;
+
 /*
  * BottomBar library for Android
  * Copyright (c) 2016 Iiro Krankka (http://github.com/roughike).
