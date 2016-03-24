@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\androidwork\wyhui\app\build\intermediates\incremental-classes\debug\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0c2b6613b87b1144a47ecb795f989afd04dba74c">
+        <dex dex="F:\androidwork\wyhui\app\build\intermediates\pre-dexed\debug\classes_af7a916c91e24ed8d8c3904bfc533df262a1a003.jar" />
+    </item>
+
+</items>
