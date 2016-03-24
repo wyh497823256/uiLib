@@ -109,7 +109,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
         }
 
 
-        initViewsAndEvents();
+        initViewsAndEvents(savedInstanceState);
     }
 
     @Override
@@ -203,7 +203,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
     /**
      * init all views and add events
      */
-    protected abstract void initViewsAndEvents();
+    protected abstract void initViewsAndEvents(Bundle savedInstanceState);
 
 
     /**
