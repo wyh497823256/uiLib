@@ -57,7 +57,7 @@ public class BaseWebActivity extends BaseSwipeBackCompatActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         setSystemBarTintDrawable(getResources().getDrawable(R.drawable.sr_primary));
 
         mToolBar = bindView(R.id.common_toolbar);
