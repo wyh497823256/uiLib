@@ -17,8 +17,9 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import frame.havery.com.ui.BaseAppManager;
 import frame.havery.com.ui.R;
-import frame.havery.com.ui.utils.CommonUtils;
+
 import frame.havery.com.ui.utils.SmartBarUtils;
+import frame.havery.com.ui.utils.StringUtils;
 import frame.havery.com.ui.viewbind.AnnotateUtil;
 import frame.havery.com.ui.widget.loading.VaryViewHelperController;
 
@@ -315,7 +316,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
      */
     protected void showToast(String msg) {
         //防止遮盖虚拟按键
-        if (null != msg && !CommonUtils.isEmpty(msg)) {
+        if (null != msg && !StringUtils.isEmpty(msg)) {
             Snackbar.make(getLoadingTargetView(), msg, Snackbar.LENGTH_SHORT).show();
         }
     }

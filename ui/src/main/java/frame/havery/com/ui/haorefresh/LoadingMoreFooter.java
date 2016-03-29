@@ -35,6 +35,7 @@ public class LoadingMoreFooter extends LinearLayout {
     }
 
     public void initView(Context context) {
+
         setGravity(Gravity.CENTER);
         setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));

@@ -31,8 +31,9 @@ import android.view.ViewGroup;
 
 import java.lang.reflect.Field;
 
+import frame.havery.com.ui.utils.StringUtils;
 import frame.havery.com.ui.viewbind.AnnotateUtil;
-import frame.havery.com.ui.utils.CommonUtils;
+
 import frame.havery.com.ui.widget.loading.VaryViewHelperController;
 
 
@@ -225,8 +226,6 @@ public abstract class BaseLazyFragment extends Fragment {
     protected abstract View getLoadingTargetView();
 
 
-
-
     /**
      * get the support fragment manager
      *
@@ -292,7 +291,7 @@ public abstract class BaseLazyFragment extends Fragment {
      * @param msg
      */
     protected void showToast(String msg) {
-        if (null != msg && !CommonUtils.isEmpty(msg)) {
+        if (null != msg && !StringUtils.isEmpty(msg)) {
             Snackbar.make(((Activity) mContext).getWindow().getDecorView(), msg, Snackbar.LENGTH_SHORT).show();
         }
     }

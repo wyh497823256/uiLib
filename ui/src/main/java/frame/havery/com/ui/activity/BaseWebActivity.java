@@ -21,7 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import frame.havery.com.ui.R;
-import frame.havery.com.ui.utils.CommonUtils;
+import frame.havery.com.ui.utils.StringUtils;
 import frame.havery.com.ui.widget.BrowserLayout;
 
 
@@ -70,13 +70,13 @@ public class BaseWebActivity extends BaseSwipeBackCompatActivity {
 //            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        }
 
-        if (!CommonUtils.isEmpty(mWebTitle)) {
+        if (!StringUtils.isEmpty(mWebTitle)) {
             setTitle(mWebTitle);
         } else {
             setTitle("网页");
         }
 
-        if (!CommonUtils.isEmpty(mWebUrl)) {
+        if (!StringUtils.isEmpty(mWebUrl)) {
             mBrowserLayout.loadUrl(mWebUrl);
         } else {
             showToast("获取URL地址失败");

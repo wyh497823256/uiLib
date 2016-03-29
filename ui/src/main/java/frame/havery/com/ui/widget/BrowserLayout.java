@@ -32,7 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import frame.havery.com.ui.R;
-import frame.havery.com.ui.utils.CommonUtils;
+import frame.havery.com.ui.utils.StringUtils;
 
 
 /**
@@ -152,7 +152,7 @@ public class BrowserLayout extends LinearLayout {
 
             @Override
             public void onClick(View v) {
-                if (!CommonUtils.isEmpty(mLoadUrl)) {
+                if (!StringUtils.isEmpty(mLoadUrl)) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(mLoadUrl));
                     mContext.startActivity(intent);
