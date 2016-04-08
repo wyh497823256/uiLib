@@ -17,9 +17,11 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import frame.havery.com.ui.BaseAppManager;
 import frame.havery.com.ui.R;
-
+import frame.havery.com.ui.other.BasePresenter;
+import frame.havery.com.ui.other.BaseView;
 import frame.havery.com.ui.utils.SmartBarUtils;
 import frame.havery.com.ui.utils.StringUtils;
+import frame.havery.com.ui.utils.ToastUtils;
 import frame.havery.com.ui.viewbind.AnnotateUtil;
 import frame.havery.com.ui.widget.loading.VaryViewHelperController;
 
@@ -27,7 +29,12 @@ import frame.havery.com.ui.widget.loading.VaryViewHelperController;
 /**
  * Created by fangxiao on 15/12/18.
  */
-public abstract class BaseAppCompatActivity extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseAppCompatActivity<T extends BasePresenter> extends AppCompatActivity implements View.OnClickListener,BaseView {
+
+    /**
+     * 将代理类通用行为抽出来
+     */
+    protected T mPresenter;
     /**
      * Log tag
      */
@@ -140,6 +147,18 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        if (mPresenter != null) mPresenter.onResume();
+    }
+
+
+    @Override
+    public void toast(String msg) {
+
+    }
+
+    @Override
     public void finish() {
         super.finish();
         BaseAppManager.getInstance().removeActivity(this);
@@ -184,8 +203,21 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (mPresenter != null) {
+            mPresenter.onDestroy();
+        }
+    }
+
+    @Override
+    public void showProgress() {
 
     }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
 
     /**
      * get bundle data
