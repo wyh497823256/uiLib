@@ -3,6 +3,7 @@ package frame.havery.com.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
+import frame.havery.com.ui.other.BasePresenter;
 import frame.havery.com.ui.widget.swipeback.SwipeBackActivityBase;
 import frame.havery.com.ui.widget.swipeback.SwipeBackActivityHelper;
 import frame.havery.com.ui.widget.swipeback.SwipeBackLayout;
@@ -12,7 +13,7 @@ import frame.havery.com.ui.widget.swipeback.Utils;
 /**
  * Created by fangxiao on 15/12/18.
  */
-public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity implements SwipeBackActivityBase {
+public abstract class BaseSwipeBackCompatActivity<T extends BasePresenter> extends BaseAppCompatActivity<T> implements SwipeBackActivityBase {
     private SwipeBackActivityHelper mHelper;
 
     @Override
@@ -20,6 +21,7 @@ public abstract class BaseSwipeBackCompatActivity extends BaseAppCompatActivity 
         super.onCreate(savedInstanceState);
         mHelper = new SwipeBackActivityHelper(this);
         mHelper.onActivityCreate();
+
     }
 
     @Override
