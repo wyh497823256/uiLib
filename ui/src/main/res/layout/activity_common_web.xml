@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <me.fangx.common.view.BrowserLayout
+    <frame.havery.com.ui.widget.BrowserLayout
         android:id="@+id/common_web_browser_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
